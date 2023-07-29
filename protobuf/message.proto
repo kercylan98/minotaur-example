@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "../protobuf";
+// protoc --proto_path . --go_out=./protobuf/protobuf/ --go-grpc_out=./protobuf/protobuf/ ./protobuf/*.proto
+
+enum MessageID {
+  None = 0; // 无
+
+  System_Heartbeat = 1000; // 心跳
+  System_ServerTime = 1001; // 获取服务器时间 Client: Time
+  System_Login = 1002; // 登录 Server: SystemLoginS Client: SystemLoginC
+}
+
+message Message {
+  MessageID id = 1;
+  bytes body = 2;
+}

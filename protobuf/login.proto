@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package protobuf;
+option go_package = "../protobuf";
+// protoc --proto_path . --go_out=./protobuf/protobuf/ --go-grpc_out=./protobuf/protobuf/ ./protobuf/*.proto
+
+message SystemLoginS {
+  string user_id = 1;
+  string account = 2;
+  string password = 3;
+}
+
+message SystemLoginC {
+  string user_id = 1;
+  string token = 2;
+}
