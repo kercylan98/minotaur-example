@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "github.com/kercylan98/minotaur-example/game/services/landlords"
 	_ "github.com/kercylan98/minotaur-example/game/services/system"
 	"github.com/kercylan98/minotaur-example/network"
 )

@@ -3,7 +3,7 @@ module github.com/kercylan98/minotaur-example
 go 1.20
 
 require (
-	github.com/kercylan98/minotaur v0.0.22
+	github.com/kercylan98/minotaur v0.0.23
 	google.golang.org/protobuf v1.30.0
 )
 

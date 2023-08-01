@@ -10,6 +10,22 @@ enum MessageID {
   System_Heartbeat = 1000; // 心跳
   System_ServerTime = 1001; // 获取服务器时间 Client: Time
   System_Login = 1002; // 登录 Server: SystemLoginS Client: SystemLoginC
+
+  Landlords_CreateRoom = 2000; // 创建房间 Server: LandlordsCreateRoomS Client: LandlordsCreateRoomC
+  Landlords_JoinRoom = 2001; // 加入房间 Server: LandlordsJoinRoomS Client: LandlordsJoinRoomC
+  Landlords_LeaveRoom = 2002; // 离开房间 Server: LandlordsLeaveRoomS Client: LandlordsLeaveRoomC
+  Landlords_Ready = 2003; // 准备 Server: LandlordsReadyS Client: LandlordsReadyC
+  Landlords_Start = 2004; // 开始 Server: LandlordsStartS Client: LandlordsStartC
+  Landlords_Call = 2005; // 叫地主 Server: LandlordsCallS Client: LandlordsCallC
+  Landlords_CallPass = 2006; // 不叫 Server: LandlordsCallPassS Client: LandlordsCallPassC
+  Landlords_Grab = 2007; // 抢地主 Server: LandlordsGrabS Client: LandlordsGrabC
+  Landlords_GrabPass = 2008; // 不抢 Server: LandlordsGrabPassS Client: LandlordsGrabPassC
+  Landlords_Play = 2009; // 出牌 Server: LandlordsPlayS Client: LandlordsPlayC
+  Landlords_Pass = 2010; // 过牌 Server: LandlordsPassS Client: LandlordsPassC
+  Landlords_End = 2011; // 结束 Server: LandlordsEndS Client: LandlordsEndC
+  Landlords_Notify_JoinRoom = 2100; // 通知加入房间 Client: LandlordsNotifyJoinRoomC
+  Landlords_Notify_LeaveRoom = 2101; // 通知离开房间 Client: LandlordsNotifyLeaveRoomC
+
 }
 
 message Message {
