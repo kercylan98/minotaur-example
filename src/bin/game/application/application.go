@@ -74,6 +74,12 @@ func onConnectionReceivePacket(srv *server.Server, conn *server.Conn, packet []b
 		}
 	}()
 
+	if !player.HasLogged() && !((msg.Type == int32(protocol.MessageType_MT_System) && msg.Id == int32(protocol.MessageSystemID_MI_Heartbeat)) ||
+		(msg.Type == int32(protocol.MessageType_MT_User) && msg.Id == int32(protocol.MessageUserID_MI_Handshake))) {
+		conn.Close()
+		return
+	}
+
 	handle := MessageRouter.Match(msg.Type, msg.Id)
 	if handle == nil {
 		panic(fmt.Errorf("not exist route: [%d] %d", msg.Type, msg.Id))
