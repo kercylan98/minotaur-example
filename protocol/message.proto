@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package protocol;
+option go_package = "../protocol";
+
+enum MessageType {
+  MT_System = 0; // 系统消息
+  MT_User = 1; // 用户消息
+}
+
+message Message {
+  int32 type = 1;
+  int32 id = 2;
+  bytes body = 9999;
+}
