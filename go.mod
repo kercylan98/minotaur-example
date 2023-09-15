@@ -3,12 +3,10 @@ module github.com/kercylan98/minotaur-example
 go 1.21
 
 require (
-	github.com/kercylan98/minotaur v0.1.6
+	github.com/kercylan98/minotaur v0.1.7-0.20230915061130-7c9bc46a3506
 	go.uber.org/zap v1.25.0
 	google.golang.org/protobuf v1.30.0
 )
-
-replace github.com/kercylan98/minotaur v0.1.6 => ../minotaur
 
 require (
 	github.com/RussellLuo/timingwheel v0.0.0-20220218152713-54845bda3108 // indirect
