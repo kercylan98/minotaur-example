@@ -3,7 +3,7 @@ module github.com/kercylan98/minotaur-example
 go 1.21
 
 require (
-	github.com/kercylan98/minotaur v0.2.1
+	github.com/kercylan98/minotaur v0.2.2
 	go.uber.org/zap v1.25.0
 	google.golang.org/protobuf v1.30.0
 	gorm.io/driver/mysql v1.5.1
@@ -11,7 +11,7 @@ require (
 )
 
 //replace (
-//	github.com/kercylan98/minotaur v0.2.1 => ../minotaur
+//	github.com/kercylan98/minotaur v0.2.2 => ../minotaur
 //)
 
 require (
