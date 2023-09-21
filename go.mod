@@ -3,10 +3,16 @@ module github.com/kercylan98/minotaur-example
 go 1.21
 
 require (
-	github.com/kercylan98/minotaur v0.1.7-0.20230915061130-7c9bc46a3506
+	github.com/kercylan98/minotaur v0.2.1
 	go.uber.org/zap v1.25.0
 	google.golang.org/protobuf v1.30.0
+	gorm.io/driver/mysql v1.5.1
+	gorm.io/gorm v1.25.4
 )
+
+//replace (
+//	github.com/kercylan98/minotaur v0.2.1 => ../minotaur
+//)
 
 require (
 	github.com/RussellLuo/timingwheel v0.0.0-20220218152713-54845bda3108 // indirect
@@ -19,9 +25,12 @@ require (
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.14.0 // indirect
+	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.5 // indirect
 	github.com/klauspost/reedsolomon v1.11.8 // indirect

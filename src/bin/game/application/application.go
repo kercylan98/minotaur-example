@@ -3,6 +3,7 @@ package application
 import (
 	"fmt"
 	"github.com/kercylan98/minotaur-example/protocol/protocol"
+	"github.com/kercylan98/minotaur-example/src/pkg/db"
 	"github.com/kercylan98/minotaur-example/src/pkg/packet"
 	"github.com/kercylan98/minotaur-example/src/pkg/typedefines"
 	"github.com/kercylan98/minotaur/server"
@@ -19,6 +20,7 @@ import (
 var (
 	MessageRouter = router.NewMultistage[func(player *typedefines.Player, reader packet.Reader)](router.WithRouteTrim[func(*typedefines.Player, packet.Reader)](onRouteTrim))
 	SocketServer  = server.New(server.NetworkWebsocket)
+	MySQL         = db.NewMySQL("minotaur:minotaur@tcp(127.0.0.1:3306)/minotaur?charset=utf8mb4&collation=utf8mb4_0900_ai_ci&parseTime=True&loc=Local")
 )
 
 // 应用程序私有实例
