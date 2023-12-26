@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-package protocol;
-option go_package = "../protocol";
-
-enum MessageSystemID {
-  MI_Heartbeat = 0; // 心跳
-}
